@@ -5,7 +5,8 @@
   </ModulePrefs>
   <Content type="html">
  <![CDATA[
-<script type="text/javascript">
+ <script type="text/javascript">
+
 	function buttonClicked() {
 		var viewerId = wave.getViewer().getId();
 		var state = wave.getState();
@@ -67,14 +68,42 @@
 			wave.setParticipantCallback(renderInfo);
 		}
 	}
+
 	gadgets.util.registerOnLoadHandler(init);
+
 </script>
 <img id="bidderThumbnail" src="http://gadget-doc-examples.googlecode.com/svn/trunk/images/unknown.gif" width="50" height="50"/><br/>
 <span id="bidderName">Nobody</span><br/>
 Highest bid: <span id="highestBid">0</span><br/>
 Your bid: <input id="yourBid" size="5" value="0"><button id="butCount" onclick="buttonClicked()">Bid</button><br/>
 Number of wave participants: <span id="participants">1</span></br>
- 
+
+<table>
+				<tr>
+								<th>Gjøre mere av</th>
+								<td>Litt av hvert</td>				
+				</tr>
+
+				<tr>
+								<th>Gjøre mindre av</th>
+								<td>Litt av hvert</td>				
+				</tr>
+
+				<tr>
+								<th>Fortsette med</th>
+								<td>Litt av hvert</td>				
+				</tr>
+
+				<tr>
+								<th>Starte med</th>
+								<td>Litt av hvert</td>				
+				</tr>
+
+				<tr>
+								<th>Slutte med</th>
+								<td>Litt av hvert</td>				
+				</tr>
+</table>	
  
 ]]>
   </Content>
