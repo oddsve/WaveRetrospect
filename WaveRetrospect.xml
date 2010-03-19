@@ -36,6 +36,7 @@
 				highestBidderId = bidder;
 			}
 		}
+
 		var bidderName = 'Nobody';
 		var thumbNail = 'http://gadget-doc-examples.googlecode.com/svn/trunk/images/unknown.gif';
 		if (highestBidderId) {
@@ -75,17 +76,19 @@
 <img id="bidderThumbnail" src="http://gadget-doc-examples.googlecode.com/svn/trunk/images/unknown.gif" width="50" height="50"/><br/>
 <span id="bidderName">Nobody</span><br/>
 Highest bid: <span id="highestBid">0</span><br/>
-Your bid: <input id="yourBid" size="5" value="0"><button id="butCount" onclick="buttonClicked()">Bid</button><br/>
+Din retrospect:<textarea id="yourRetro">Fyll inn her</textarea><button id="butCount" onclick="buttonClicked()">Bid</button><br/>
+
+<input id="yourbid" size="5" value="0"><button id="butCount" onclick="buttonClicked()">Bid</button><br/>
 Number of wave participants: <span id="participants">1</span></br>
 
 <table>
 				<tr>
-								<th>Gjøre mere av</th>
+								<th>Gjore mere av</th>
 								<td>Litt av hvert</td>				
 				</tr>
 
 				<tr>
-								<th>Gjøre mindre av</th>
+								<th>Gjore mindre av</th>
 								<td>Litt av hvert</td>				
 				</tr>
 
