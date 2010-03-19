@@ -61,6 +61,7 @@
 		document.getElementById('highestBid').firstChild.nodeValue = highestBid;
 		document.getElementById('yourBid').value = highestBid;
 		document.getElementById('participants').firstChild.nodeValue = numPeople;
+		document.getElementById('mere').firstChild.nodeValue = "test";
 	}
  
 	function init() {
@@ -83,7 +84,7 @@ Number of wave participants: <span id="participants">1</span></br>
 <table>
 				<tr>
 								<th>Gjore mere av</th>
-								<td>Litt av hvert</td>				
+								<td><span id="mere">Litt av hvert</span></td>				
 				</tr>
 
 				<tr>
