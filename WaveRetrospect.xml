@@ -78,7 +78,6 @@
 Highest bid: <span id="highestBid">0</span><br/>
 Din retrospect:<textarea id="yourRetro">Fyll inn her</textarea><button id="butCount" onclick="buttonClicked()">Bid</button><br/>
 
-<input id="yourbid" size="5" value="0"><button id="butCount" onclick="buttonClicked()">Bid</button><br/>
 Number of wave participants: <span id="participants">1</span></br>
 
 <table>
