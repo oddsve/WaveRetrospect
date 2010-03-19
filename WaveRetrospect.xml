@@ -10,14 +10,11 @@
 	function buttonClicked() {
 		var viewerId = wave.getViewer().getId();
 		var state = wave.getState();
-		var bid = parseInt(document.getElementById('yourBid').value);
-		var currentBid = parseInt(state.get(viewerId, '0'));
-		if (bid > currentBid) {
+		var retro = document.getElementById('yourRetro').value;
 
 			delta = {};
-			delta[viewerId] = bid;
+			delta[viewerId] = retro;
 			state.submitDelta(delta);
-		}
 	}
 
 	function renderInfo() {
