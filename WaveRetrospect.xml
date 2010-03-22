@@ -22,8 +22,11 @@
 			return;
 		}
 		var thumbNail = 'http://gadget-doc-examples.googlecode.com/svn/trunk/images/unknown.gif';
+    var viewerId = wave.getViewer().getId();
+		var retro = wave.getState().get(viewerId);
+
 		document.getElementById('bidderThumbnail').src = thumbNail;
-		document.getElementById('mere').firstChild.nodeValue = "test";
+		document.getElementById('mere').firstChild.nodeValue = retro;
 	}
  
 	function init() {
@@ -37,33 +40,32 @@
 
 </script>
 <img id="bidderThumbnail" src="http://gadget-doc-examples.googlecode.com/svn/trunk/images/unknown.gif" width="50" height="50"/><br/>
-Din retrospect:<textarea id="yourRetro">Fyll inn her</textarea><button id="butCount" onclick="buttonClicked()">Bid</button><br/>
+Din retrospect:<textarea id="yourRetro">Fyll inn her</textarea><button id="butCount" onclick="buttonClicked()">Retro</button><br/>
 
 <table>
-				<tr>
-								<th>Gjore mere av</th>
-								<td><span id="mere">Litt av hvert</span></td>				
-				</tr>
+  <tr>
+    <th>Gjore mere av</th>
+    <td><span id="mere">Litt av hvert</span></td>
+	</tr>
+  <tr>
+    <th>Gjore mindre av</th>
+		<td>Litt av hvert</td>				
+	</tr>
 
-				<tr>
-								<th>Gjore mindre av</th>
-								<td>Litt av hvert</td>				
-				</tr>
+	<tr>
+		<th>Fortsette med</th>
+		<td>Litt av hvert</td>				
+	</tr>
 
-				<tr>
-								<th>Fortsette med</th>
-								<td>Litt av hvert</td>				
-				</tr>
+	<tr>
+		<th>Starte med</th>
+		<td>Litt av hvert</td>				
+	</tr>
 
-				<tr>
-								<th>Starte med</th>
-								<td>Litt av hvert</td>				
-				</tr>
-
-				<tr>
-								<th>Slutte med</th>
-								<td>Litt av hvert</td>				
-				</tr>
+	<tr>
+    <th>Slutte med</th>
+		<td>Litt av hvert</td>				
+	</tr>
 </table>	
  
 ]]>
