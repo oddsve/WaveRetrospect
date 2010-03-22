@@ -11,15 +11,16 @@
 		var viewerId = wave.getViewer().getId();
 		var state = wave.getState();
 		var retro = document.getElementById('yourRetro').value;
+    var type = document.getElementById('yourType').value;
 
 			delta = {};
 			delta[viewerId] = retro;
 			state.submitDelta(delta);
 
 			delta = {};
-			var mere = wave.getState().get("totalMere");
+			var mere = wave.getState().get(type);
 
-      delta["totalMere"] = mere + " " + retro;
+      delta[type] = mere + " " + retro;
 			state.submitDelta(delta);
 
   }
@@ -28,12 +29,14 @@
 		if (!wave.getState()) {
 			return;
 		}
-		var thumbNail = 'http://gadget-doc-examples.googlecode.com/svn/trunk/images/unknown.gif';
-    var viewerId = wave.getViewer().getId();
-		var retro = wave.getState().get("totalMere");
 
-		document.getElementById('bidderThumbnail').src = thumbNail;
-		document.getElementById('mere').firstChild.nodeValue = retro;
+    var keys = wave.getState().getKeys();
+
+    for (var i = 0 ; i<keys.length; i++){
+      document.getElementById(key[i]).firstChild.nodeValue = wave.getState().get(i);
+    }
+
+
 	}
  
 	function init() {
@@ -48,30 +51,37 @@
 </script>
 <img id="bidderThumbnail" src="http://gadget-doc-examples.googlecode.com/svn/trunk/images/unknown.gif" width="50" height="50"/><br/>
 Din retrospect:<textarea id="yourRetro">Fyll inn her</textarea><button id="butCount" onclick="buttonClicked()">Retro</button><br/>
+Type:<select id="yourType">
+<option> Mere av
+<option> Mindre av
+<option selected> Fortsette med
+<option> Starte med
+<option> Slutte med
+</select>
 
 <table>
   <tr>
     <th>Gjore mere av</th>
-    <td><span id="mere">Litt av hvert</span></td>
+    <td><span id="Mere av">Litt av hvert</span></td>
 	</tr>
   <tr>
     <th>Gjore mindre av</th>
-		<td>Litt av hvert</td>				
+    <td><span id="Mindre av">Litt av hvert</span></td>
 	</tr>
 
 	<tr>
 		<th>Fortsette med</th>
-		<td>Litt av hvert</td>				
+    <td><span id="Fortsette med">Litt av hvert</span></td>
 	</tr>
 
 	<tr>
 		<th>Starte med</th>
-		<td>Litt av hvert</td>				
+    <td><span id="Starte med">Litt av hvert</span></td>
 	</tr>
 
 	<tr>
     <th>Slutte med</th>
-		<td>Litt av hvert</td>				
+    <td><span id="Slutte med">Litt av hvert</span></td>
 	</tr>
 </table>	
  
