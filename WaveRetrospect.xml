@@ -15,7 +15,14 @@
 			delta = {};
 			delta[viewerId] = retro;
 			state.submitDelta(delta);
-	}
+
+			delta = {};
+			var mere = wave.getState().get("totalMere");
+
+      delta["totalMere"] = mere + " " + retro;
+			state.submitDelta(delta);
+
+  }
 
 	function renderInfo() {
 		if (!wave.getState()) {
