@@ -30,7 +30,7 @@
 		}
 		var thumbNail = 'http://gadget-doc-examples.googlecode.com/svn/trunk/images/unknown.gif';
     var viewerId = wave.getViewer().getId();
-		var retro = wave.getState().get(viewerId);
+		var retro = wave.getState().get("totalMere");
 
 		document.getElementById('bidderThumbnail').src = thumbNail;
 		document.getElementById('mere').firstChild.nodeValue = retro;
