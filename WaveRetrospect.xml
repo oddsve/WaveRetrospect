@@ -8,7 +8,7 @@
  <script type="text/javascript">
 
   function debug(  textString ) {
-    document.getElementById('debug').firstChild.nodeValue = textString;
+    document.getElementById('debug').firstChild.nodeValue = document.getElementById('debug').firstChild.nodeValue  + " " +textString;
   }
 
 
