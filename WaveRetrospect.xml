@@ -7,13 +7,18 @@
  <![CDATA[
  <script type="text/javascript">
 
+  function debug( var textString ) {
+    document.getElementById('debug').firstChild.nodeValue = textString;
+  }
+
+
 	function buttonClicked() {
 		var viewerId = wave.getViewer().getId();
 		var state = wave.getState();
 		var retro = document.getElementById('yourRetro').value;
     var type = document.getElementById('yourType').value;
 
-    document.getElementById('debug').firstChild.nodeValue = type;
+    debug(type);
 
 			delta = {};
 			delta[viewerId] = retro;
