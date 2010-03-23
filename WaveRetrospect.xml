@@ -43,7 +43,6 @@
 
     var keys = wave.getState().getKeys();
     debug (keys.length);
-    debug( wave.getState().get(0) );
     debug( wave.getState().get(1) );
     debug( wave.getState().get(2) );
     debug( wave.getState().get(3) );
@@ -69,7 +68,7 @@
 	gadgets.util.registerOnLoadHandler(init);
 
 </script>
-Debug: <span id="debug">DEBUG</span>
+Debug: <span id="debug">Debug</span>
 <img id="bidderThumbnail" src="http://gadget-doc-examples.googlecode.com/svn/trunk/images/unknown.gif" width="50" height="50"/><br/>
 Din retrospect:<textarea id="yourRetro">Fyll inn her</textarea><button id="butCount" onclick="buttonClicked()">Retro</button>
 <button id="clrDbg" onclick="clearDebug()">Clear Debug</button><br/>
