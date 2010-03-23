@@ -13,14 +13,14 @@
 		var retro = document.getElementById('yourRetro').value;
     var type = document.getElementById('yourType').value;
 
+    document.getElementById('debug').firstChild.nodeValue = type;
+
 			delta = {};
 			delta[viewerId] = retro;
 			state.submitDelta(delta);
 
 			delta = {};
-			var mere = wave.getState().get(type);
-
-      delta[type] = mere + " " + retro;
+			delta[type] = wave.getState().get(type) + " " + retro;
 			state.submitDelta(delta);
 
   }
@@ -49,6 +49,7 @@
 	gadgets.util.registerOnLoadHandler(init);
 
 </script>
+Debug: <span id="debug">Debug</span>
 <img id="bidderThumbnail" src="http://gadget-doc-examples.googlecode.com/svn/trunk/images/unknown.gif" width="50" height="50"/><br/>
 Din retrospect:<textarea id="yourRetro">Fyll inn her</textarea><button id="butCount" onclick="buttonClicked()">Retro</button><br/>
 Type:<select id="yourType">
