@@ -22,15 +22,9 @@
 		var retro = document.getElementById('yourRetro').value;
     var type = document.getElementById('yourType').value;
 
-    debug(retro);
 
-			delta = {};
-			delta[viewerId] = retro;
-			state.submitDelta(delta);
-      
       
 			delta = {};
-			//delta[type] = wave.getState().get(type) + " " + retro;
 			delta[type] =  retro;
 			state.submitDelta(delta);
 
@@ -42,16 +36,7 @@
 		}
 
     var keys = wave.getState().getKeys();
-    debug (keys.length);
-    debug("1" +  wave.getState().get(1) );
-    debug("2" +  wave.getState().get(2) );
-    debug("3" + wave.getState().get(3) );
-    debug("4" +  wave.getState().get(4) );
-    debug("5" +  wave.getState().get(5) );
-    debug("6" +  wave.getState().get(6) );
-    debug("7" +  wave.getState().get(7) );
     for (var i = 1 ; i<=keys.length; i++){
-      debug( wave.getState().get(i) );
       document.getElementById(keys[i]).firstChild.nodeValue = wave.getState().get(i);
     }
 
@@ -68,7 +53,7 @@
 	gadgets.util.registerOnLoadHandler(init);
 
 </script>
-Debug: <span id="debug">Debug</span>
+Debug: <span id="debug">DEbug</span>
 <img id="bidderThumbnail" src="http://gadget-doc-examples.googlecode.com/svn/trunk/images/unknown.gif" width="50" height="50"/><br/>
 Din retrospect:<textarea id="yourRetro">Fyll inn her</textarea><button id="butCount" onclick="buttonClicked()">Retro</button>
 <button id="clrDbg" onclick="clearDebug()">Clear Debug</button><br/>
