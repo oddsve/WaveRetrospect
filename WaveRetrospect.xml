@@ -18,11 +18,13 @@
 		var retro = document.getElementById('yourRetro').value;
     var type = document.getElementById('yourType').value;
 
-    debug(type);
+    debug(retro);
 
 			delta = {};
 			delta[viewerId] = retro;
 			state.submitDelta(delta);
+      
+      debug(retro+ " "+ test);
 
 			delta = {};
 			delta[type] = wave.getState().get(type) + " " + retro;
