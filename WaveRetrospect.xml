@@ -15,6 +15,10 @@
     document.getElementById('debug').firstChild.nodeValue = document.getElementById('debug').firstChild.nodeValue  + " " +textString;
   }
 
+  function showAddSign() {
+    dogument.getElementById('thMere').bgcolor="Red";
+  }
+
 
 	function buttonClicked() {
 		var viewerId = wave.getViewer().getId();
@@ -23,9 +27,8 @@
     var type = document.getElementById('yourType').value;
 
 
-    document.getElementById(type).firstChild.nodeValue = retro;
-			delta = {};
-			delta[type] =  retro;
+    	delta = {};
+			delta[type] =  state.get(type) + " " + retro ;
 			state.submitDelta(delta);
 
   }
@@ -70,7 +73,7 @@ Type:<select id="yourType">
 
 <table>
   <tr>
-    <th>Gjore mere av</th>
+    <th id="thMere" onMouseOver="showAddSign()">Gjore mere av</th>
     <td><span id="Mere av">Litt av hvert</span></td>
 	</tr>
   <tr>
